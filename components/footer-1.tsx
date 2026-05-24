@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AnimatedGridPattern from "./animated-grid-pattern";
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 
 interface FooterLink {
@@ -36,18 +36,18 @@ const Footer1 = () => {
   ];
 
   return (
-    <div className="px-6 relative text-foreground">
+    <div className="px-6 w-full relative text-foreground">
     
-      <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-primary-foreground">
-             <AnimatedGridPattern
-              className={cn(
-                "mask-[radial-gradient(600px_circle_at_center,white,transparent)]",
-                "inset-x-0 h-full w-full skew-y-0"
-              )}
-              duration={3}
-              maxOpacity={0.1}
-              numSquares={30}
-            />
+      <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-primary-foreground relative! overflow-hidden">
+          <AnimatedGridPattern
+                 className={cn(
+                   "mask-[radial-gradient(400px_circle_at_center,white,transparent)]",
+                   "inset-x-0 h-full w-full skew-y-12"
+                 )}
+                 duration={3}
+                 maxOpacity={0.1}
+                 numSquares={30}
+               />
         <div className="">
           <a href={"/"} className="inline-flex items-center justify-center gap-2  rounded-full ">
             <img

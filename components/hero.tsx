@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <div className="relative w-full flex min-h-screen items-center justify-center overflow-hidden px-6">
+    <div className="relative w-full flex  items-center justify-center overflow-hidden px-6">
       <AnimatedGridPattern
         className={cn(
           "mask-[radial-gradient(600px_circle_at_center,white,transparent)]",
@@ -17,7 +17,7 @@ export default function Hero() {
         maxOpacity={0.1}
         numSquares={30}
       />
-      <div className="relative z-10 max-w-4xl text-center">
+      <div className="relative z-10 max-w-4xl text-center px-5 md:p-0">
         {/* <Badge
           asChild
           className="rounded-full border-border py-1"
@@ -33,7 +33,7 @@ export default function Hero() {
         <p className="mx-auto mt-6 max-w-full text-muted-foreground text-xl md:text-2xl/normal">
           Zaki Gym in Khanewal offers a safe and modern fitness space for both men and women. With separate areas, expert trainers, and affordable plans, it's the perfect place for cardio, strength training, and weight loss. Join now to start your fitness journey!
         </p>
-        <div className="mt-12 flex items-center justify-center gap-4">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
           <Button className="rounded-full" size="lg">
             Get Started <ArrowUpRight className="h-5! w-5!" />
           </Button>
