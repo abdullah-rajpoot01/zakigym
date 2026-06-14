@@ -10,13 +10,13 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="">
-    <Hero/>
-    <SlideScale/>
-    <AboutFeatures/>
-    <Features/>
-    <Pricing/>
-    <Testimonials/>
-    <CTA/>
+      <Hero />
+      {/* <SlideScale/> */}
+      <Features />
+      <AboutFeatures />
+      <Pricing />
+      <Testimonials />
+      <CTA />
     </div>
   );
 }

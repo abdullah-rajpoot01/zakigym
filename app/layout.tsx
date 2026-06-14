@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-serif", playfairDisplay.variable)}
     >
-      <body suppressHydrationWarning className="min-h-full flex flex-col justify-between relative">
+      <body suppressHydrationWarning className="min-h-screen max-w-7xl flex flex-col justify-between relative mx-auto">
         <Navbar/>
         {children}
         <Footer1/>

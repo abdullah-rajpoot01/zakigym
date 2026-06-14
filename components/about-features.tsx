@@ -48,11 +48,11 @@ const features = [
 
 const AboutFeatures = () => {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col px-6 py-20 ">
-      <h2 className="text-pretty text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-30 bg-[url('https://images.pexels.com/photos/3888405/pexels-photo-3888405.jpeg')] bg-cover bg-center bg-fixed">
+      <h2 className="text-background text-pretty text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Engineered for speed
       </h2>
-      <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+      <p className="text-background/80 mt-3 text-pretty text-center  text-xl tracking-[-0.01em] sm:text-2xl">
         Designed for speed, flexibility, and ease of use
       </p>
 
@@ -62,7 +62,7 @@ const AboutFeatures = () => {
             className="relative rounded-xl border bg-card p-6 dark:border-card-foreground/7 "
             key={index}
           >
-            <div className="absolute -top-4 left-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground ">
+            <div className=" flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground ">
               <feature.icon />
             </div>
             <h3 className="mt-5 font-medium text-lg tracking-[-0.005em]">

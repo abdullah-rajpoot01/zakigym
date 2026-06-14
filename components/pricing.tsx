@@ -50,8 +50,9 @@ const plans = [
 ];
 
 const Pricing = () => {
+  
   return (
-    <div className="px-6 py-20">
+    <div className="px-6 py-20 ">
       <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Our Plans
       </h2>
@@ -61,7 +62,8 @@ const Pricing = () => {
       <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 gap-8 sm:mt-16 lg:grid-cols-3">
         {plans.map((plan) => (
           <div
-            className="border border-border/85 bg-card p-6 shadow-xs/3"
+            className="border border-border/85 bg-card p-6 shadow-xs/3 timeline-view animate-slide-in-left animate-range-cover
+"
             key={plan.name}
           >
             <h3 className="font-medium text-lg">{plan.name}</h3>
@@ -81,7 +83,7 @@ const Pricing = () => {
               ))}
             </ul>
             <Button
-              className="mt-6 w-full"
+              className="mt-6 w-full animate-shake"
               size="lg"
               variant={plan.isPopular ? "default" : "outline"}
             >

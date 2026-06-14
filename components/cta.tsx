@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from './ui/button'
 
 const CTA = () => {
   return (
@@ -14,12 +15,12 @@ const CTA = () => {
            Zaki Gym in Khanewal offers a safe and modern fitness space for both men and women. With separate areas, expert trainers, and affordable plans, it's the perfect place for cardio, strength training, and weight loss. Join now to start your fitness journey!
           </p>
           <div className="mt-4 md:mt-8">
-            <a
-              href="#"
-              className="inline-block rounded-sm border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition-colors hover:bg-transparent hover:text-blue-600"
+            <Button
+           
+              className="rounded-sm "
             >
               Get Started Today
-            </a>
+            </Button>
           </div>
         </div>
       </div>

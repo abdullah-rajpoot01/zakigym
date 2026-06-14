@@ -59,12 +59,12 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <div className="px-6 py-20">
+  <div className="px-6 py-20 bg-[url('https://images.pexels.com/photos/6796964/pexels-photo-6796964.jpeg')] bg-cover bg-center bg-fixed">
     <div>
-      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+      <h2 className="text-white text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
         What our customers say
       </h2>
-      <p className="mt-3.5 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
+      <p className="text-white/80 mt-3.5 text-center text-xl tracking-[-0.015em] md:text-2xl">
         Discover what our valued customers think about our innovative products
       </p>
       <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:columns-3">

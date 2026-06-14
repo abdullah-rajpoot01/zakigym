@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback } from "./ui/avatar";
 
 interface FooterLink {
   label: string
@@ -37,25 +38,18 @@ const Footer1 = () => {
 
   return (
     <div className="px-6 w-full relative text-foreground">
-    
       <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-primary-foreground relative! overflow-hidden">
-          <AnimatedGridPattern
-                 className={cn(
-                   "mask-[radial-gradient(400px_circle_at_center,white,transparent)]",
-                   "inset-x-0 h-full w-full skew-y-12"
-                 )}
-                 duration={3}
-                 maxOpacity={0.1}
-                 numSquares={30}
-               />
         <div className="">
           <a href={"/"} className="inline-flex items-center justify-center gap-2  rounded-full ">
-            <img
-              src={
-                "/text-logo.png"
-              }
-              className="max-h-25 dark:invert"
-            />
+            <div className="flex items-center gap-3">
+              <Avatar className="size-9">
+                {/* <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" /> */}
+                <AvatarFallback className="bg-black text-white">Z</AvatarFallback>
+              </Avatar>
+              <div className="flex items-center gap-1 font-bold leading-none tracking-wider text-xl text-foreground">
+                Zaki Gym
+              </div>
+            </div>
           </a>
           <p className="max-w-102 mt-6 text-foreground/80">
             We don’t just build websites or create content — we build a complete digital presence that attracts high-value clients, boosts credibility, and turns visitors into loyal customers.

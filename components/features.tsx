@@ -2,6 +2,7 @@ import {
   ArrowUpRightIcon,
   BinocularsIcon,
   CogIcon,
+  Dumbbell,
   ShieldCheckIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,20 +10,20 @@ import { Button } from "@/components/ui/button";
 const plusPoints = [
   {
     icon: ShieldCheckIcon,
-    image:"/gym/pexels-alexapopovich-10551491.jpg",
+    image: "/gym/pexels-mamadvali-17706035.jpg",
     title: "Real-Time Protection",
     description:
       "Stay alert with instant notifications and smart security monitoring.",
   },
   {
     icon: CogIcon,
-    image:"/gym/pexels-alexapopovich-10551491.jpg",
+    image: "/gym/pexels-tima-miroshnichenko-5327502.jpg",
     title: "Smart & Simple Setup",
     description: "Install easily in minutes with no complex tools or wiring.",
   },
   {
     icon: BinocularsIcon,
-    image:"/gym/pexels-alexapopovich-10551491.jpg",
+    image: "/gym/pexels-alexapopovich-10551491.jpg",
     title: "Peace of Mind Anywhere",
     description: "Monitor and control your home from anywhere, anytime.",
   },
@@ -44,24 +45,31 @@ export default function Features() {
         We are constantly always keep pace with the time.
       </p>
 
-      <div className="mt-16 flex flex-wrap justify-center gap-4">
+      <div className="mt-16 flex flex-wrap justify-center gap-4 relative">
         {plusPoints.map((plusPoint) => (
           <div
-            className="relative w-full overflow-hidden  border bg-linear-to-b from-foreground/3 px-6 py-10 sm:max-w-xs"
+            className={`relative w-full overflow-hidden  border bg-linear-to-b from-foreground/3 px-6 py-15 sm:max-w-xs `}
             key={plusPoint.title}
           >
-            <BackgroundPattern />
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${plusPoint.image})`,
+              }}
+            />
+            <div className="absolute inset-0 bg-black/40" />
+            {/* <BackgroundPattern /> */}
 
             <div className="isolate flex flex-col items-center gap-2">
-              {/* <plusPoint.icon className="size-14 stroke-[1.5px] text-foreground" /> */}
-              <img className="size-40 rounded-full object-cover aspect-square" src={plusPoint.image}/>
-              <h3 className="mt-8 font-medium text-xl tracking-[-0.005em]">
+              <plusPoint.icon className="size-20 border-2 bg-white p-3 rounded-full object-cover aspect-square text-gray-600" />
+
+              <h3 className="mt-8 font-medium text-xl tracking-[-0.005em] text-white">
                 {plusPoint.title}
               </h3>
-              <p className="text-balance text-base text-muted-foreground">
+              <p className="text-balance text-base  text-white/70">
                 {plusPoint.description}
               </p>
-              <Button className="mt-6">
+              <Button  className="mt-6 bg-white hover:bg-white text-black">
                 Learn More <ArrowUpRightIcon />
               </Button>
             </div>
