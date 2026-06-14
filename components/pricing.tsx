@@ -59,11 +59,10 @@ const Pricing = () => {
       <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
         Choose the plan that fits your needs
       </p>
-      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 gap-8 sm:mt-16 lg:grid-cols-3">
-        {plans.map((plan) => (
-          <div
-            className="border border-border/85 bg-card p-6 shadow-xs/3 timeline-view animate-slide-in-left animate-range-cover
-"
+      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 gap-8 sm:mt-16 lg:grid-cols-3 overflow-hidden">
+        {plans.map((plan,index) => (
+          <div data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+            className="border border-border/85 bg-card p-6 shadow-xs/3 "
             key={plan.name}
           >
             <h3 className="font-medium text-lg">{plan.name}</h3>

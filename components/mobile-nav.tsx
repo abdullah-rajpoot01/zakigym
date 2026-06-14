@@ -8,26 +8,21 @@ import {
 } from "@/components/ui/dialog"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import Link from "next/link"
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
 import { Home, Menu, MenuSquare, Phone, User2 } from "lucide-react"
 import { ScrollArea } from "./ui/scroll-area"
+import { useState } from "react"
 
 export function MobileNavDialog() {
+    const [open, setOpen] = useState(false);
     return (
-        <Dialog>
+        <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
                 <Button className="rounded-full" size="icon" variant="outline">
                     <Menu />
                 </Button>
             </DialogTrigger>
-            <DialogContent className="h-[85vh] sm:max-w-none lg:hidden rounded-xl flex flex-col gap-6">
-                <DialogHeader className="">
+            <DialogContent className="h-[80vh] sm:max-w-none lg:hidden rounded-xl flex flex-col gap-0 p-0">
+                <DialogHeader className="p-6 pb-0 flex-shrink-0">
                     <DialogTitle className="">
                         <div className="flex items-center gap-3">
                             <Avatar className="size-9">
@@ -41,10 +36,11 @@ export function MobileNavDialog() {
                         </div>
                     </DialogTitle>
                 </DialogHeader>
-                <ScrollArea  className="h-[80%] w-full no-scrollbar ">
-                    <div className="flex-1 py-2">
+                
+                <ScrollArea className="flex-1 w-full px-6">
+                    <div className="pt-4 pb-2">
                         <nav className="flex flex-col items-start w-full gap-3">
-                            <Link
+                            <Link onClick={() => setOpen(false)}
                                 href="#"
                                 className="w-full flex items-center rounded-xl gap-3 px-6 py-3 text-left bg-accent transition-colors"
                             >
@@ -68,19 +64,21 @@ export function MobileNavDialog() {
                             >
                                 <Phone className="size-5" /> <span>Contact Us</span>
                             </Link>
-
                         </nav>
                     </div>
+                </ScrollArea>
+                
+                <div className="flex-shrink-0 p-6 pt-0">
                     <div className="flex flex-col gap-3">
                         <Button
-                            className="rounded-full"
+                            className="rounded-full w-full"
                             variant="outline"
                         >
                             Contact Us
                         </Button>
-                        <Button className="rounded-full">Call Now</Button>
+                        <Button className="rounded-full w-full">Call Now</Button>
                     </div>
-                </ScrollArea>
+                </div>
             </DialogContent>
         </Dialog>
     )

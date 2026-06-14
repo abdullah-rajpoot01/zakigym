@@ -67,10 +67,11 @@ const Testimonials = () => (
       <p className="text-white/80 mt-3.5 text-center text-xl tracking-[-0.015em] md:text-2xl">
         Discover what our valued customers think about our innovative products
       </p>
-      <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:columns-3">
+      <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:columns-3 overflow-hidden">
         {testimonials.map((testimonial) => (
-          <div
-            className="relative mb-8 break-inside-avoid rounded-xl bg-muted p-6 dark:bg-muted/60"
+          <div data-aos="fade-left"
+            className="relative mb-8 break-inside-avoid rounded-xl bg-muted p-6 dark:bg-muted/60 
+"
             key={testimonial.id}
           >
             <div className="flex items-center justify-between">

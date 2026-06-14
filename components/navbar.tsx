@@ -7,7 +7,7 @@ import { MobileNavDialog } from "./mobile-nav";
 const Navbar = () => {
 
   return (
-      <nav className="fixed top-3 z-50 left-1/2 -translate-x-1/2 h-16 w-[95%] rounded-full border border-border/85 bg-background shadow-xs/3">      
+      <nav className="fixed top-3 z-50 left-1/2 -translate-x-1/2 h-16 w-[95%] max-w-6xl rounded-full border border-border/85 bg-background shadow-xs/3">      
      <div className="flex h-full items-center justify-between px-4  ">
       <div className="flex items-center gap-3">
         <Avatar className="size-9">
@@ -24,12 +24,12 @@ const Navbar = () => {
 
       <div className="flex items-center gap-3">
         <Button
-          className="hidden rounded-full sm:inline-flex"
+          className="hidden rounded-full sm:inline-flex hover:animate-sink hover:animate-iteration-count-infinite"
           variant="outline"
         >
           Contact Us
         </Button>
-        <Button className="hidden rounded-full sm:inline-flex ">Call Now</Button>
+        <Button className="hidden rounded-full sm:inline-flex hover:animate-sink hover:animate-iteration-count-infinite">Call Now</Button>
 
         {/* Mobile Menu */}
         <div className="md:hidden">

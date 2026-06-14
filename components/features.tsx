@@ -45,9 +45,9 @@ export default function Features() {
         We are constantly always keep pace with the time.
       </p>
 
-      <div className="mt-16 flex flex-wrap justify-center gap-4 relative">
-        {plusPoints.map((plusPoint) => (
-          <div
+      <div className="mt-16 flex flex-wrap justify-center gap-4 relative overflow-hidden">
+        {plusPoints.map((plusPoint, index) => (
+          <div data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
             className={`relative w-full overflow-hidden  border bg-linear-to-b from-foreground/3 px-6 py-15 sm:max-w-xs `}
             key={plusPoint.title}
           >
@@ -69,7 +69,7 @@ export default function Features() {
               <p className="text-balance text-base  text-white/70">
                 {plusPoint.description}
               </p>
-              <Button  className="mt-6 bg-white hover:bg-white text-black">
+              <Button className="mt-6 bg-white hover:bg-white text-black">
                 Learn More <ArrowUpRightIcon />
               </Button>
             </div>

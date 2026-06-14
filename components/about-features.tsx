@@ -58,8 +58,9 @@ const AboutFeatures = () => {
 
       <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
-          <div
-            className="relative rounded-xl border bg-card p-6 dark:border-card-foreground/7 "
+          <div data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+            className="relative overflow-hidden rounded-xl border bg-card p-6 dark:border-card-foreground/70
+"
             key={index}
           >
             <div className=" flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground ">

@@ -4,6 +4,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 import Footer1 from "@/components/footer-1";
+import AOSInit from "@/components/init-aos";
+import { DialogBanner } from "@/components/dialog-banner";
 
 const playfairDisplay = Playfair_Display({subsets:['latin'],variable:'--font-serif'});
 
@@ -34,8 +36,10 @@ export default function RootLayout({
     >
       <body suppressHydrationWarning className="min-h-screen max-w-7xl flex flex-col justify-between relative mx-auto">
         <Navbar/>
+        <DialogBanner/>
         {children}
         <Footer1/>
+        <AOSInit/>
         </body>
     </html>
   );
