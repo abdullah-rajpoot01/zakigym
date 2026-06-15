@@ -15,8 +15,8 @@ export function DialogBanner() {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
-        // Auto show after 5 seconds
-        const timer = setTimeout(() => setOpen(true), 100000);
+        // Auto show after 30 seconds
+        const timer = setTimeout(() => setOpen(true), 300000);
 
         return () => {
             clearTimeout(timer);
