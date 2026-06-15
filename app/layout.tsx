@@ -7,7 +7,7 @@ import Footer1 from "@/components/footer-1";
 import AOSInit from "@/components/init-aos";
 import { DialogBanner } from "@/components/dialog-banner";
 
-const playfairDisplay = Playfair_Display({subsets:['latin'],variable:'--font-serif'});
+const playfairDisplay = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,13 +23,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Zaki Gym – Best Unisex Fitness Center for Men & Women in Khanewal",
   description:
-    "Zaki Gym in Khanewal offers a safe and modern fitness space for both men and women. With separate areas, expert trainers, and affordable plans, it's the perfect place for cardio, strength training, and weight loss. Join now to start your fitness journey!",
+    "Zaki Gym in Khanewal offers a safe and modern fitness space for both men and women. With separate areas, expert trainers, and affordable plans",
+    
+  metadataBase: new URL("https://zakigym.pages.dev"),
 
   openGraph: {
     title: "Zaki Gym – Best Unisex Fitness Center in Khanewal",
     description:
       "Join Zaki Gym in Khanewal for expert training, modern equipment, and separate workout areas for men & women. Start your fitness journey today!",
-    url: "https://zakigym.pages.dev",
+    url: "/",
     siteName: "Zaki Gym",
     images: [
       {
@@ -63,12 +65,12 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-serif", playfairDisplay.variable)}
     >
       <body suppressHydrationWarning className="min-h-screen max-w-7xl flex flex-col justify-between relative mx-auto">
-        <Navbar/>
-        <DialogBanner/>
+        <Navbar />
+        <DialogBanner />
         {children}
-        <Footer1/>
-        <AOSInit/>
-        </body>
+        <Footer1 />
+        <AOSInit />
+      </body>
     </html>
   );
 }
