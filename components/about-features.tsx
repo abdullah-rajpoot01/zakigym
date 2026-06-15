@@ -1,65 +1,64 @@
 import {
-  Cable,
-  Code,
-  Contrast,
-  MonitorSmartphone,
-  SquareDashedMousePointer,
-  Zap,
+  Dumbbell,
+  Users,
+  UserRound,
+  ShieldCheck,
+  BadgeDollarSign,
+  HeartHandshake,
 } from "lucide-react";
 
 const features = [
   {
-    title: "Blazing Fast Performance",
+    title: "Modern Equipment",
     description:
-      "Optimized for speed with minimal loading times and instant interactions, ensuring a smooth experience across devices.",
-    icon: Zap,
+      "Train with high-quality machines and free weights designed for effective workouts and better results.",
+    icon: Dumbbell,
   },
   {
-    title: "Fully Customizable",
+    title: "Experienced Trainers",
     description:
-      "Tailor every component to match your brand or workflow — with built-in support for themes, layouts, and configurations.",
-    icon: SquareDashedMousePointer,
+      "Our professional trainers provide guidance and support to help you reach your fitness goals safely.",
+    icon: Users,
   },
   {
-    title: "Developer-Friendly",
+    title: "Personal Training",
     description:
-      "Built with clean, modern code and best practices in mind, making it easy to integrate, extend, and scale.",
-    icon: Code,
+      "Get customized workout plans and one-on-one coaching tailored to your fitness level and objectives.",
+    icon: UserRound,
   },
   {
-    title: "Responsive by Default",
+    title: "Clean Environment",
     description:
-      "Every component is designed to look great on all screen sizes — no extra work needed to make things mobile-friendly.",
-    icon: MonitorSmartphone,
+      "Enjoy a clean, comfortable, and well-maintained gym environment for a better workout experience.",
+    icon: ShieldCheck,
   },
   {
-    title: "Accessible for Everyone",
+    title: "Flexible Membership",
     description:
-      "Built with accessibility best practices in mind to ensure an inclusive experience for all users, regardless of ability.",
-    icon: Contrast,
+      "Choose from affordable membership plans designed to fit your schedule and fitness needs.",
+    icon: BadgeDollarSign,
   },
   {
-    title: "Seamless Integration",
+    title: "Friendly Community",
     description:
-      "Easily connect with your favorite tools, APIs, and services — whether it's authentication, databases, or third-party libraries.",
-    icon: Cable,
+      "Work out alongside motivated members in a positive atmosphere that keeps you inspired.",
+    icon: HeartHandshake,
   },
 ];
-
 const AboutFeatures = () => {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col px-6 py-30 bg-[url('https://images.pexels.com/photos/3888405/pexels-photo-3888405.jpeg')] bg-cover bg-center bg-fixed">
+    <div id="our-features" className="mx-auto flex max-w-7xl flex-col px-6 py-30 bg-black/90">
       <h2 className="text-background text-pretty text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
-        Engineered for speed
+        What We Provide
       </h2>
       <p className="text-background/80 mt-3 text-pretty text-center  text-xl tracking-[-0.01em] sm:text-2xl">
-        Designed for speed, flexibility, and ease of use
+        Everything you need to stay fit, healthy, and motivated at Zaki Gym Khanewal.
       </p>
 
       <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
-          <div data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-            className="relative overflow-hidden rounded-xl border bg-card p-6 dark:border-card-foreground/70
+          <div data-aos={"fade-right"}
+            className="relative overflow-hidden  border bg-card p-6 dark:border-card-foreground/70
 "
             key={index}
           >

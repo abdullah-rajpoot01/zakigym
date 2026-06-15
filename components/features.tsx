@@ -1,133 +1,127 @@
 import {
-  ArrowUpRightIcon,
-  BinocularsIcon,
-  CogIcon,
   Dumbbell,
-  ShieldCheckIcon,
+  Users,
+  UserRound,
+  ShieldCheck,
+  BadgeDollarSign,
+  HeartHandshake,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
-const plusPoints = [
+const features = [
   {
-    icon: ShieldCheckIcon,
-    image: "/gym/pexels-mamadvali-17706035.jpg",
-    title: "Real-Time Protection",
+    title: "Modern Equipment",
     description:
-      "Stay alert with instant notifications and smart security monitoring.",
+      "Train with high-quality machines and free weights designed for effective workouts and better results.",
+    icon: Dumbbell,
   },
   {
-    icon: CogIcon,
-    image: "/gym/pexels-tima-miroshnichenko-5327502.jpg",
-    title: "Smart & Simple Setup",
-    description: "Install easily in minutes with no complex tools or wiring.",
+    title: "Experienced Trainers",
+    description:
+      "Our professional trainers provide guidance and support to help you reach your fitness goals safely.",
+    icon: Users,
   },
   {
-    icon: BinocularsIcon,
-    image: "/gym/pexels-alexapopovich-10551491.jpg",
-    title: "Peace of Mind Anywhere",
-    description: "Monitor and control your home from anywhere, anytime.",
+    title: "Personal Training",
+    description:
+      "Get customized workout plans and one-on-one coaching tailored to your fitness level and objectives.",
+    icon: UserRound,
+  },
+  {
+    title: "Clean Environment",
+    description:
+      "Enjoy a clean, comfortable, and well-maintained gym environment for a better workout experience.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Flexible Membership",
+    description:
+      "Choose from affordable membership plans designed to fit your schedule and fitness needs.",
+    icon: BadgeDollarSign,
+  },
+  {
+    title: "Friendly Community",
+    description:
+      "Work out alongside motivated members in a positive atmosphere that keeps you inspired.",
+    icon: HeartHandshake,
   },
 ];
-
-export default function Features() {
+const AboutFeatures = () => {
   return (
-    <div
-      className="mx-auto max-w-(--breakpoint-xl) px-6 py-24 text-center"
-      id="why-choose-us"
-    >
-      <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
-        Why Choose Us
-      </strong>
-      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl/tight tracking-[-0.04em] sm:text-[2.75rem]">
-        We are Leading in Smart Assistants with Nearly 20 Years of Experience
+    <div id="our-features" className="mx-auto flex max-w-7xl flex-col px-6 py-30 bg-black/90 bg-[url('/gym/pexels-eyecon-design-500632474-17211446.jpg')] bg-cover bg-center bg-fixed">
+      <h2 className="text-background text-pretty text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+        What We Provide
       </h2>
-      <p className="mt-5 text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
-        We are constantly always keep pace with the time.
+      <p className="text-background/80 mt-3 text-pretty text-center  text-xl tracking-[-0.01em] sm:text-2xl">
+        Everything you need to stay fit, healthy, and motivated at Zaki Gym Khanewal.
       </p>
 
-      <div className="mt-16 flex flex-wrap justify-center gap-4 relative overflow-hidden">
-        {plusPoints.map((plusPoint, index) => (
-          <div data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-            className={`relative w-full overflow-hidden  border bg-linear-to-b from-foreground/3 px-6 py-15 sm:max-w-xs `}
-            key={plusPoint.title}
+      <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {features.map((feature, index) => (
+          <div data-aos={"fade-right"}
+            className="relative overflow-hidden  border bg-card p-6 dark:border-card-foreground/70
+"
+            key={index}
           >
+            <div className=" flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground ">
+              <feature.icon />
+            </div>
+            <h3 className="mt-5 font-medium text-lg tracking-[-0.005em]">
+              {feature.title}
+            </h3>
+            <p className="mt-2 text-foreground/80">{feature.description}</p>
+
             <div
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 -top-px z-0"
               style={{
-                backgroundImage: `url(${plusPoint.image})`,
+                backgroundImage: `
+        linear-gradient(to right, var(--border) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
+      `,
+                backgroundSize: "20px 20px",
+                backgroundPosition: "0 0, 0 0",
+                maskImage: `
+          repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 100% 80% at 100% 0%, #000 50%, transparent 100%)
+      `,
+                WebkitMaskImage: `
+    repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
+      `,
+                maskComposite: "intersect",
+                WebkitMaskComposite: "source-in",
               }}
             />
-            <div className="absolute inset-0 bg-black/40" />
-            {/* <BackgroundPattern /> */}
-
-            <div className="isolate flex flex-col items-center gap-2">
-              <plusPoint.icon className="size-20 border-2 bg-white p-3 rounded-full object-cover aspect-square text-gray-600" />
-
-              <h3 className="mt-8 font-medium text-xl tracking-[-0.005em] text-white">
-                {plusPoint.title}
-              </h3>
-              <p className="text-balance text-base  text-white/70">
-                {plusPoint.description}
-              </p>
-              <Button className="mt-6 bg-white hover:bg-white text-black">
-                Learn More <ArrowUpRightIcon />
-              </Button>
-            </div>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
-function BackgroundPattern() {
-  return (
-    <div
-      className="absolute inset-0 -top-px -left-px"
-      style={{
-        backgroundImage: `
-        linear-gradient(to right, var(--border) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
-      `,
-        backgroundSize: "20px 20px",
-        backgroundPosition: "0 0, 0 0",
-        maskImage: `
-        repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
-      `,
-        WebkitMaskImage: `
- repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
-      `,
-        maskComposite: "intersect",
-        WebkitMaskComposite: "source-in",
-      }}
-    />
-  );
-}
+export default AboutFeatures;

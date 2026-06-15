@@ -3,74 +3,60 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
-    company: "TechCorp",
+    name: "Ali Hassan",
+    designation: "Student",
     testimonial:
-      "This product has completely transformed the way we work. The efficiency and ease of use are unmatched!",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+      "Zaki Gym has helped me stay consistent with my workouts. The environment is motivating and the trainers are always ready to help.",
   },
   {
     id: 2,
-    name: "Sophia Lee",
-    designation: "Data Analyst",
-    company: "InsightTech",
+    name: "Muhammad Bilal",
+    designation: "Business Owner",
     testimonial:
-      "This tool has saved me hours of work! The analytics and reporting features are incredibly powerful.",
-    avatar: "https://randomuser.me/api/portraits/women/6.jpg",
+      "I've been training here for several months and have seen great improvements in my fitness and energy levels. Highly recommended.",
   },
   {
     id: 3,
-    name: "Michael Johnson",
-    designation: "UX Designer",
-    company: "DesignPro",
+    name: "Usman Khan",
+    designation: "Fitness Enthusiast",
     testimonial:
-      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry. " +
-      "The intuitive interface makes it easy to onboard new team members, and the automation features save us countless hours every week. ",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+      "The gym has all the essential equipment I need for strength training. It's clean, affordable, and has a great atmosphere.",
   },
   {
     id: 4,
-    name: "Emily Davis",
-    designation: "Marketing Specialist",
-    company: "BrandBoost",
+    name: "Ayesha Noor",
+    designation: "Student",
     testimonial:
-      "I've seen a significant improvement in our team's productivity since we started using this service.",
-    avatar: "https://randomuser.me/api/portraits/women/4.jpg",
+      "I was nervous about joining a gym, but the friendly environment at Zaki Gym made me feel comfortable from day one.",
   },
   {
     id: 5,
-    name: "Daniel Martinez",
-    designation: "Full-Stack Developer",
-    company: "CodeCrafters",
+    name: "Hamza Ahmed",
+    designation: "Office Worker",
     testimonial:
-      "The best investment we've made! The support team is also super responsive and helpful.",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
+      "The membership fees are reasonable and the trainers provide useful guidance. It's the best gym experience I've had in Khanewal.",
   },
   {
     id: 6,
-    name: "Jane Smith",
-    designation: "Product Manager",
-    company: "InnovateX",
+    name: "Abdullah Javed",
+    designation: "College Student",
     testimonial:
-      "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate.",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+      "Great place to work on your fitness goals. The equipment is well maintained and the atmosphere keeps me motivated every day.",
   },
 ];
-
 const Testimonials = () => (
-  <div className="px-6 py-20 bg-[url('https://images.pexels.com/photos/6796964/pexels-photo-6796964.jpeg')] bg-cover bg-center bg-fixed">
+  <div id="testimonials" className="px-6 py-20 bg-[url('/gym/pexels-tima-miroshnichenko-5327551.jpg')] bg-cover bg-center bg-fixed">
     <div>
       <h2 className="text-white text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
-        What our customers say
+        What Our Members Say
       </h2>
       <p className="text-white/80 mt-3.5 text-center text-xl tracking-[-0.015em] md:text-2xl">
-        Discover what our valued customers think about our innovative products
+        Hear from the people who train with us at Zaki Gym Khanewal.
       </p>
       <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:columns-3 overflow-hidden">
         {testimonials.map((testimonial) => (
           <div data-aos="fade-left"
-            className="relative mb-8 break-inside-avoid rounded-xl bg-muted p-6 dark:bg-muted/60 
+            className="relative mb-8 break-inside-avoid  bg-muted p-6 dark:bg-muted/60 
 "
             key={testimonial.id}
           >

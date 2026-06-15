@@ -1,0 +1,80 @@
+import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from "lucide-react";
+import Link from "next/link";
+
+const Contact = () => (
+    <div className="flex min-h-screen items-center justify-center pt-30 pb-16  bg-black/90 bg-[url('/gym/pexels-dimkidama-6796964.jpg')] bg-cover bg-center bg-fixed overflow-hidden">
+        <div className="mx-auto text-center w-full max-w-(--breakpoint-xl) px-6 xl:px-0">
+            <b className="font-medium text-white text-sm uppercase tracking-wide">
+                Contact Us | Zaki Gym
+            </b>
+            <h2 className="mt-3 text-white/80 font-medium text-4xl tracking-[-0.04em]">
+                We&apos;d love to hear from you
+            </h2>
+            <p className="mt-3 text-white/80 text-lg  md:text-xl">
+                Our friendly team is always here to chat.
+            </p>
+            <div className="mt-14 grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div data-aos={"fade-left"} className="border border-dashed  p-6 pb-8 bg-white">
+                    <div className="flex mx-auto h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
+                        <MailIcon />
+                    </div>
+                    <h3 className="mt-8 font-medium text-xl">Email</h3>
+                    <p className="mt-1.5 mb-4 text-muted-foreground">
+                        Our friendly team is here to help.
+                    </p>
+                    <Link
+                        className="font-medium"
+                        href="mailto:zakigym@gmail.com"
+                    >
+                        zakigym@gmail.com
+                    </Link>
+                </div>
+                <div data-aos={"fade-left"} className="border border-dashed p-6 pb-8 bg-white">
+                    <div className="flex mx-auto h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
+                        <MessageCircle />
+                    </div>
+                    <h3 className="mt-8 font-medium text-xl">WhatsApp Chat</h3>
+                    <p className="mt-1.5 mb-4 text-muted-foreground">
+                        Chat with us instantly on WhatsApp.
+
+                    </p>
+                    <Link className="font-medium" href="https://wa.me/923460881219"
+                        target="_blank">
+                        +92 (346) 088-1219
+                    </Link>
+                </div>
+                <div data-aos={"fade-left"} className="border border-dashed  p-6 pb-8 bg-white">
+                    <div className="flex mx-auto  h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
+                        <MapPinIcon />
+                    </div>
+                    <h3 className="mt-8 font-medium text-xl">Location</h3>
+                    <p className="mt-1.5 mb-4 text-muted-foreground">
+                        Come say hello at our Gym.
+                    </p>
+                    <Link
+                        className="font-medium"
+                        href="https://map.google.com"
+                        target="_blank"
+                    >
+                        Kashmir Road, Street 2, City Care Street <br />
+                        Khanewal, Pakistan
+                    </Link>
+                </div>
+                <div data-aos={"fade-left"} className="border border-dashed p-6 pb-8 bg-white">
+                    <div className="flex mx-auto  h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
+                        <PhoneIcon />
+                    </div>
+                    <h3 className="mt-8 font-medium text-xl">Phone</h3>
+                    <p className="mt-1.5 mb-4 text-muted-foreground">
+                        Mon-Fri from 6am to 10pm.
+                    </p>
+                    <Link className="font-medium" href="tel:+923460881219">
+                        +92 (346) 088-1219
+                    </Link>
+                </div>
+            </div>
+        </div>
+    </div>
+);
+
+export default Contact;

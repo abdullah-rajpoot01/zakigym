@@ -4,64 +4,63 @@ import { Separator } from "@/components/ui/separator";
 
 const plans = [
   {
-    name: "Starter (Monthly)",
-    price: 999,
-    description: "Perfect for beginners. Access to basic gym equipment and cardio zone.",
+    name: "Monthly Plan",
+    price: 2500,
+    description:
+      "Perfect for anyone looking to start their fitness journey.",
     features: [
       "Valid for 1 month",
-      "Access to cardio & basic machines",
-      "Separate timing for men & women",
-      "Locker room access",
-      "Free fitness consultation",
+      "Access to all available gym equipment",
+      "Cardio & strength training area",
+      "Clean workout environment",
+      "Trainer guidance available",
     ],
-    buttonText: "Join Starter Plan",
+    buttonText: "Call Now For Booking",
   },
   {
-    name: "Advanced (3 Months)",
-    price: 1799,
-    isRecommended: true,
-    description: "Ideal for regular fitness enthusiasts. Includes strength training and guided support.",
+    name: "3 Month Plan",
+    price: 7000,
+    description:
+      "Best value for members committed to regular training.",
     features: [
       "Valid for 3 months",
-      "Full gym access (cardio + strength)",
-      "1 free personal training session/week",
-      "Separate areas for men & women",
-      "Locker & shower access",
-      "Free body composition analysis",
+      "Access to all available gym equipment",
+      "Cardio & strength training area",
+      "Trainer guidance available",
+      "Priority membership support",
     ],
-    buttonText: "Join Advanced Plan",
+    buttonText: "Call Now For Booking",
     isPopular: true,
   },
   {
-    name: "Premium",
-    price: 3499,
-    description: "Ultimate fitness experience with personal training and diet guidance.",
+    name: "6 Month Plan",
+    price: 13000,
+    description:
+      "Ideal for long-term fitness goals and consistent progress.",
     features: [
       "Valid for 6 months",
-      "Unlimited gym access",
-      "3 personal training sessions/week",
-      "Custom diet plan",
-      "Monthly progress tracking",
-      "Priority access to new equipment",
-      "Free Zaki Gym kit (t-shirt + bottle)",
+      "Unlimited gym access during working hours",
+      "Access to all available gym equipment",
+      "Cardio & strength training area",
+      "Trainer guidance available",
     ],
-    buttonText: "Join Premium Plan",
+    buttonText: "Call Now For Booking",
   },
 ];
 
 const Pricing = () => {
-  
+
   return (
-    <div className="px-6 py-20 ">
+    <div id="pricing" className="px-6 py-20 ">
       <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
-        Our Plans
+        Membership Plans
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
-        Choose the plan that fits your needs
+        Affordable fitness plans at Zaki Gym Khanewal for every fitness level.
       </p>
       <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 gap-8 sm:mt-16 lg:grid-cols-3 overflow-hidden">
-        {plans.map((plan,index) => (
-          <div data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+        {plans.map((plan, index) => (
+          <div data-aos={"fade-left"}
             className="border border-border/85 bg-card p-6 shadow-xs/3 "
             key={plan.name}
           >
@@ -81,6 +80,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
+            <a href="tel:+923460881219">
             <Button
               className="mt-6 w-full animate-shake"
               size="lg"
@@ -88,6 +88,7 @@ const Pricing = () => {
             >
               {plan.buttonText}
             </Button>
+            </a>
           </div>
         ))}
       </div>

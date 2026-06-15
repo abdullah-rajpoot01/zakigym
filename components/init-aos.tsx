@@ -7,7 +7,7 @@ import "aos/dist/aos.css"; // Global styles for animations
 export default function AOSInit() {
   useEffect(() => {
     AOS.init({
-      duration: 800, // global duration in milliseconds
+      duration: 500, // global duration in milliseconds
       once: false,   // whether animations repeat on scroll
     });
   }, []);

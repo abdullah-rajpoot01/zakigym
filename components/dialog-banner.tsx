@@ -6,7 +6,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog"
-import { HeartPulse, Home, Mail, MessageCircle, PhoneCall, Settings2, X } from "lucide-react"
+import { HeartPulse, Home, Mail, MessageCircle, PhoneCall, X } from "lucide-react"
 import { ScrollArea } from "./ui/scroll-area"
 import { useEffect, useState } from "react"
 import { Badge } from "./ui/badge"
@@ -18,7 +18,6 @@ export function DialogBanner() {
         // Auto show after 5 seconds
         const timer = setTimeout(() => setOpen(true), 100000);
 
-
         return () => {
             clearTimeout(timer);
         };
@@ -27,7 +26,7 @@ export function DialogBanner() {
 
     return (
         <Dialog open={open} onOpenChange={setOpen}>
-            <DialogContent className="h-[70vh] sm:max-w-md rounded-xl flex flex-col gap-0 p-0 bg-gray-900 [&>button:last-child]:hidden ">
+            <DialogContent className="h-[80vh] sm:max-w-md rounded-xl flex flex-col gap-0 p-0 bg-gray-900 [&>button:last-child]:hidden ">
                 <DialogHeader className="bg-red-700 p-4 rounded-t-xl shrink-0">
                     <DialogTitle className="flex flex-col items-center">
                         <div className="flex justify-around items-center w-full relative">
@@ -41,8 +40,7 @@ export function DialogBanner() {
                             Gym Tour Today
                         </div>
                         <p className="mt-3 text-pretty text-center text-base tracking-[-0.01em] text-white/70">
-                            Visit Ginnastic Arena I-8 — See the facilities & get your free fitness assessment
-                        </p>
+                            Zaki Gym – Best Unisex Fitness Center for Men & Women in Khanewal                        </p>
                     </DialogTitle>
                 </DialogHeader>
 
@@ -77,32 +75,40 @@ export function DialogBanner() {
                         </div>
 
                     </div>
+                    <div className="shrink-0 p-4 pt-4">
+                        <div className="flex items-center justify-center flex-wrap gap-3">
+                            <a href="tel:+923460881219">
+                                <Button
+                                    className="rounded-full text-black bg-white hover:bg-white"
+                                    size={"sm"}
+                                >
+                                    <PhoneCall /> Phone
+                                </Button>
+                            </a>
+                            <a href="https://wa.me/923460881219"
+                                target="_blank">
+                                <Button
+                                    className="rounded-full text-white"
+                                    size={"sm"}
+                                    variant="outline"
+                                >
+                                    <MessageCircle /> Whatsapp
+                                </Button>
+                            </a>
+                            <a href="mailto:zakigym@gmail.com">
+                                <Button
+                                    className="rounded-full text-white"
+                                    variant="outline"
+                                    size={"sm"}
+                                >
+                                    <Mail /> Email
+                                </Button>
+                            </a>
+                        </div>
+                    </div>
                 </ScrollArea>
 
-                <div className="flex-shrink-0 p-4 pt-0">
-                    <div className="flex items-center justify-center flex-wrap gap-3">
-                        <Button
-                            className="rounded-full text-black bg-white hover:bg-white"
-                            size={"sm"}
-                        >
-                            <PhoneCall /> Phone
-                        </Button>
-                        <Button
-                            className="rounded-full text-white"
-                            size={"sm"}
-                            variant="outline"
-                        >
-                            <MessageCircle /> Whatsapp
-                        </Button>
-                        <Button
-                            className="rounded-full text-white"
-                            variant="outline"
-                            size={"sm"}
-                        >
-                            <Mail /> Email
-                        </Button>
-                    </div>
-                </div>
+
             </DialogContent>
         </Dialog>
     )

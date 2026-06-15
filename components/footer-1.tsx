@@ -18,10 +18,10 @@ const Footer1 = () => {
     {
       title: "Quick Links",
       links: [{ label: "Home", url: "/" },
-      { label: "Web Development", url: "/website-design" },
-      { label: "Google My Business", url: "/google-my-business" },
-      { label: "Graphic Design", url: "/graphic-design" },
-      { label: "Pricing", url: "/pricing" },
+      { label: "Why Us", url: "/#why-us" },
+      { label: "Our Features", url: "/#our-features" },
+      { label: "Testimonials", url: "/#testimonials" },
+      { label: "Pricing", url: "/#pricing" },
       ],
     },
     {
@@ -29,9 +29,7 @@ const Footer1 = () => {
       links: [
         { label: "About Us", url: "/about-us" },
         { label: "Contact Us", url: "/contact-us" },
-        { label: "FAQs", url: "/faqs" },
         { label: "Privacy Policy", url: "/privacy-policy" },
-        { label: "Terms And Conditions", url: "/terms-and-conditions" },
       ],
     },
   ];
@@ -52,7 +50,7 @@ const Footer1 = () => {
             </div>
           </a>
           <p className="max-w-102 mt-6 text-foreground/80">
-            We don’t just build websites or create content — we build a complete digital presence that attracts high-value clients, boosts credibility, and turns visitors into loyal customers.
+          Zaki Gym in Khanewal offers a safe and modern fitness space for both men and women. With separate areas, expert trainers, and affordable plans, it's the perfect place for cardio, strength training, and weight loss. Join now to start your fitness journey!
           </p>
         </div>
 
@@ -76,7 +74,7 @@ const Footer1 = () => {
         </div>
       </div>
       <p className="py-4 text-center text-sm md:text-base text-foreground/80 border-t border-t-primary-foreground/50">
-        Copyright 2026 © <Link href="/">Eligo Digital .</Link> All
+        Copyright 2026 © <Link href="/">Zaki Gym .</Link> All
         Right Reserved.
       </p>
     </div>
