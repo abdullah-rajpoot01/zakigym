@@ -23,7 +23,7 @@ export function MobileNavDialog() {
                     <Menu />
                 </Button>
             </DialogTrigger>
-            <DialogContent className="h-[80vh] sm:max-w-none lg:hidden rounded-xl flex flex-col gap-0 p-0">
+            <DialogContent className="h-[80vh] sm:max-w-none lg:hidden  flex flex-col gap-0 p-0">
                 <DialogHeader className="p-6 pb-0 shrink-0">
                     <DialogTitle className="">
                         <Link href={"/"} className="flex items-center gap-3">
@@ -44,37 +44,37 @@ export function MobileNavDialog() {
                         <nav className="flex flex-col items-start w-full gap-3">
                             <Link onClick={() => setOpen(false)}
                                 href="/"
-                                className="w-full flex items-center rounded-xl gap-3 px-6 py-3 text-left bg-accent transition-colors"
+                                className="w-full flex items-center  gap-3 px-6 py-3 text-left bg-accent transition-colors"
                             >
                                 <Home className="size-5" /> <span>Home</span>
                             </Link>
                             <Link onClick={() => setOpen(false)}
                                 href="/#why-us"
-                                className="w-full flex items-center rounded-xl gap-3 px-6 py-3 text-left bg-accent transition-colors"
+                                className="w-full flex items-center  gap-3 px-6 py-3 text-left bg-accent transition-colors"
                             >
                                 <MenuSquare className="size-5" /> <span>Why Us</span>
                             </Link>
                             <Link onClick={() => setOpen(false)}
                                 href="/#our-features"
-                                className="w-full flex items-center rounded-xl gap-3 px-6 py-3 text-left bg-accent transition-colors"
+                                className="w-full flex items-center  gap-3 px-6 py-3 text-left bg-accent transition-colors"
                             >
                                 <HeartPulse className="size-5" /> <span>Our Features</span>
                             </Link>
                             <Link onClick={() => setOpen(false)}
                                 href="/#pricing"
-                                className="w-full flex items-center rounded-xl gap-3 px-6 py-3 text-left bg-accent transition-colors"
+                                className="w-full flex items-center  gap-3 px-6 py-3 text-left bg-accent transition-colors"
                             >
                                 <DollarSign className="size-5" /> <span>Pricing</span>
                             </Link>
                             <Link onClick={() => setOpen(false)}
                                 href="/#testimonials"
-                                className="w-full flex items-center rounded-xl gap-3 px-6 py-3 text-left bg-accent transition-colors"
+                                className="w-full flex items-center  gap-3 px-6 py-3 text-left bg-accent transition-colors"
                             >
                                 <User2Icon className="size-5" /> <span>Testimonials</span>
                             </Link>
                             <Link onClick={() => setOpen(false)}
                                 href="/about-us"
-                                className="w-full flex items-center rounded-xl gap-3 px-6 py-3 text-left bg-accent transition-colors"
+                                className="w-full flex items-center  gap-3 px-6 py-3 text-left bg-accent transition-colors"
                             >
                                 <UserCircle className="size-5" /> <span>About Us</span>
                             </Link>
@@ -85,13 +85,13 @@ export function MobileNavDialog() {
                                     router.push("/contact-us");
                                     setOpen(false);
                                 }}
-                                    className="rounded-full w-full"
+                                    className=" w-full"
                                     variant="outline"
                                 >
                                     Contact Us
                                 </Button>
                                 <a onClick={() => setOpen(false)} href="tel:+923460881219">
-                                    <Button className="rounded-full w-full">Call Now</Button>
+                                    <Button className=" w-full">Call Now</Button>
                                 </a>
                             </div>
                         </div>
