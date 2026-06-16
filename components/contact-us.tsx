@@ -43,23 +43,6 @@ const Contact = () => (
                         +92 (346) 088-1219
                     </Link>
                 </div>
-                <div data-aos={"fade-left"} className="border border-dashed  p-6 pb-8 bg-white">
-                    <div className="flex mx-auto  h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
-                        <MapPinIcon />
-                    </div>
-                    <h3 className="mt-8 font-medium text-xl">Location</h3>
-                    <p className="mt-1.5 mb-4 text-muted-foreground">
-                        Come say hello at our Gym.
-                    </p>
-                    <Link
-                        className="font-medium"
-                        href="https://map.google.com"
-                        target="_blank"
-                    >
-                        Kashmir Road, Street 2, City Care Street <br />
-                        Khanewal, Pakistan
-                    </Link>
-                </div>
                 <div data-aos={"fade-left"} className="border border-dashed p-6 pb-8 bg-white">
                     <div className="flex mx-auto  h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
                         <PhoneIcon />
@@ -70,6 +53,43 @@ const Contact = () => (
                     </p>
                     <Link className="font-medium" href="tel:+923460881219">
                         +92 (346) 088-1219
+                    </Link>
+                </div>
+                <div
+                    data-aos="fade-left"
+                    className=" lg:col-span-3 border border-dashed p-6 pb-8 bg-white"
+                >
+                    <div className="flex mx-auto h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
+                        <MapPinIcon />
+                    </div>
+
+                    <h3 className="mt-8 font-medium text-xl">Our Location</h3>
+
+                    <p className="mt-1.5 mb-4 text-muted-foreground">
+                        Kashmir Road, Street 2, City Care Street <br />
+                        Khanewal, Pakistan
+                    </p>
+
+                    <div className="overflow-hidden rounded-lg border">
+                        <iframe
+                            src="https://maps.google.com/maps?q=30.2985933,71.9347534&z=17&output=embed"
+                            width="100%"
+                            height="250"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Zaki Gym Location"
+                        />
+                    </div>
+
+                    <Link
+                        href="https://www.google.com/maps?q=30.2985933,71.9347534&z=17"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-block font-medium"
+                    >
+                        Open in Google Maps
                     </Link>
                 </div>
             </div>

@@ -21,16 +21,17 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: "Zaki Gym – Best Unisex Fitness Center for Men & Women in Khanewal",
+  title: "Zaki Gym Khanewal | Best Unisex Fitness Center for Men & Women",
   description:
-    "Zaki Gym in Khanewal offers a safe and modern fitness space for both men and women. With separate areas, expert trainers, and affordable plans",
-    
+    "Looking for the best gym in Khanewal? Zaki Gym offers separate facilities for men and women, expert fitness trainers, modern cardio and strength equipment, weight loss programs, and affordable membership packages. Start your fitness journey today.",
+
   metadataBase: new URL("https://zakigym.pages.dev"),
 
   openGraph: {
-    title: "Zaki Gym – Best Unisex Fitness Center in Khanewal",
+    title: "Zaki Gym Khanewal | Best Unisex Fitness Center for Men & Women",
     description:
-      "Join Zaki Gym in Khanewal for expert training, modern equipment, and separate workout areas for men & women. Start your fitness journey today!",
+      "Looking for the best gym in Khanewal? Zaki Gym offers separate facilities for men and women, expert fitness trainers, modern cardio and strength equipment, weight loss programs, and affordable membership packages. Start your fitness journey today.",
+
     url: "/",
     siteName: "Zaki Gym",
     images: [
@@ -47,9 +48,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Zaki Gym – Best Fitness Center in Khanewal",
+    title: "Zaki Gym Khanewal | Best Unisex Fitness Center for Men & Women",
     description:
-      "Modern gym with expert trainers, separate areas for men & women, and affordable plans.",
+      "Looking for the best gym in Khanewal? Zaki Gym offers separate facilities for men and women, expert fitness trainers, modern cardio and strength equipment, weight loss programs, and affordable membership packages. Start your fitness journey today.",
+
     images: ["/og-default.png"],
   },
 };

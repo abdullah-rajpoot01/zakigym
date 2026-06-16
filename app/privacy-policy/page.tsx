@@ -1,4 +1,12 @@
 import React from 'react'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Zaki Gym Khanewal",
+  description:
+    "Read the Privacy Policy of Zaki Gym Khanewal to learn how we collect, use, store, and protect your personal information when you visit our website or use our fitness services.",
+};
+
 
 export interface LegalPolicy2Props {
     title?: string
