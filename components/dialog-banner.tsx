@@ -6,7 +6,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog"
-import { HeartPulse, Home, Mail, MessageCircle, PhoneCall, X } from "lucide-react"
+import { Clock, Dumbbell, HeartPulse, Home, Mail, MessageCircle, PhoneCall, X } from "lucide-react"
 import { ScrollArea } from "./ui/scroll-area"
 import { useEffect, useState } from "react"
 import { Badge } from "./ui/badge"
@@ -65,15 +65,23 @@ export function DialogBanner() {
                             </div>
                         </div>
                         <div className="flex items-start gap-3 text-white">
-                            <HeartPulse className="shrink-0 bg-white rounded-full p-1 text-black size-6" />
+                            <Dumbbell className="shrink-0 bg-white rounded-full p-1 text-black size-6" />
                             <div className="flex flex-col">
-                                <p>Free Fitness Assessment</p>
+                                <p>Free Workout Consultation</p>
                                 <p className="text-white/70">
-                                    BMI, body analysis & goal planning
+                                    Personalized training advice from our fitness coaches
                                 </p>
                             </div>
                         </div>
-
+                        <div className="flex items-start gap-3 text-white">
+                            <Clock className="shrink-0 bg-white rounded-full p-1 text-black size-6" />
+                            <div className="flex flex-col">
+                                <p>Free Trial Workout</p>
+                                <p className="text-white/70">
+                                    Experience our equipment and training environment firsthand
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div className="shrink-0 p-4 pt-4">
                         <div className="flex items-center justify-center flex-wrap gap-3">
